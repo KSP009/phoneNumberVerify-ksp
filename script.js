@@ -12,7 +12,7 @@ let apiurl='http://apilayer.net/api/validate?access_key=' + access_key + '&numbe
 
 async function fetchapi(){
     try{
-        let response = await fetch(apiurl);
+        let response = await fetch(apiurl,{method: 'GET'});
         if(response.status===200){
             let data=response.json();
             console.log(data)
